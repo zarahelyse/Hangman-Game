@@ -4,16 +4,22 @@ body {
     background-color: #111;
 }
 
+.jumbotron{
+    background-color: #747272;
+}
+
+#display-3{
+    display: inline-flex;
+}
 
 .container{
     background-color: #747272; 
-    margin: 50px 100px 50px 100px;
+    margin: 50px 50px 50px 50px;
     padding: 10px 10px 10px 10px;
+
 }
 
-header{
-    padding-left: 300px;
-}
+
 
 p{
     margin-left:400px;

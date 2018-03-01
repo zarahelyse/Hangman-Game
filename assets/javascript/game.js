@@ -181,14 +181,16 @@ var hangman = {
     },
 
     // increment win/lose count by one and play audio 
-    winLoseCount: function() {
+    winLoseCountAndAudioOnGameEnd: function() {
         if (this.lives === 0) {
+            this.playAudio('assets/sounds/gameLost.mp3');
             loseCount++;
             this.gameOver = true;
             this.winOrLose = false;
         }
 
         if (this.matchedLettersCount == this.computerWordLength) {
+            this.playAudio('assets/sounds/gameWon.mp3');
             winCount++;
             this.winOrLose = true;
             this.gameOver = true;
@@ -206,7 +208,7 @@ var hangman = {
             } else {
                 html += '<div class="message">You died.</div>';
             }
-            html += '<div class="load">Play again in 5 seconds!';
+            html += '<div class="load">New Word will load in 4 seconds. ';
             html += ' <i class="fa fa-spinner fa-spin" aria-hidden="true"></i> </div>';
 
             document.querySelector("#loadingMessage").innerHTML = html;
@@ -224,8 +226,21 @@ var hangman = {
         this.init();
     },
 
+    // play audio
+    playAudio: function(gameAudio) {
+        var audio = new Audio(gameAudio);
+        audio.play();
+        audio.volume = .5;
+    },
 
-
+    // shows hangman images
+    showHangmanImage: function() {
+        if (this.lives != 10) {
+            document.querySelector("#hangman-img").src = "assets/images/hangman-" + (9 - this.lives) + ".png";
+        } else {
+            document.querySelector("#hangman-img").src = "assets/images/animals.png";
+        }
+    },
 
     // when user clicks letter Buttons 
     letterClick: function(letter) {
