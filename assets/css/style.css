@@ -1,0 +1,144 @@
+body {
+    line-height: 150%;
+    color: #ddd;
+    background-color: #111;
+}
+
+
+.container{
+    background-color: #747272; 
+    margin: 50px 100px 50px 100px;
+    padding: 10px 10px 10px 10px;
+}
+
+header{
+    padding-left: 300px;
+}
+
+p{
+    margin-left:400px;
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: bold;
+    color: #520b0b;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+
+#gameWord {
+    margin-bottom: 6px;
+}
+
+#gameWord,
+#word,
+#rules {
+    color: #520b0b;
+    font-weight: bold;
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    text-align: center;
+}
+
+
+#word {
+    font-size: 1.7em;
+}
+
+
+.winLose{
+    color: #520b0b;
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: bold;
+
+}
+wins{
+    color: #520b0b;
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: bold;
+}
+
+.load {
+    color: #520b0b;
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: bold;
+}
+
+.fa-spinner {
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.message {
+    font-size: 25px;
+    color: #520b0b;
+    font-weight: bold;
+}
+
+#hangman-img-holder {
+    width: 200px;
+    height: 160px;
+    margin-bottom: 15px;
+}
+
+#hangman-img {
+    padding: 2px;
+    margin-top: 3px;
+    background-color: #000;
+    border: 3px solid #222;
+}
+
+.panel .panel-body {
+    padding: 5px 0px 0px 5px;
+    background-color: #222;
+}
+
+.panel {
+    border: 1px solid #444;
+    margin-right: 5px;
+}
+
+.liActive,
+.liDisabled {
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    cursor: pointer;
+    color: #000;
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #520b0b;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    display: inline-block;
+}
+
+.liActive li:hover {
+    background-color: #888;
+    cursor: pointer;
+}
+
+.liActive {
+    background-color: #520b0b;
+}
+
+.liDisabled {
+    background-color: #888;
+    border: 1px solid #898;
+}
+
+
+/* footer */
+
+footer {
+    background-color:#747272;
+    color: #aaa;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 11px;
+    clear: both;
+}
+
