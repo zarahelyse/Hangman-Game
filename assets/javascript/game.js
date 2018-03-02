@@ -58,11 +58,10 @@ var hangman = {
         document.querySelector("#winCount").innerHTML = winCount;
         document.querySelector("#loseCount").innerHTML = loseCount;
         document.querySelector("#winLose").style.display = 'inline-block';
-        document.querySelector("#hangman-img").src = 'assets/images/animals.png';
     },
 
-    // proceed to hangman rules if user input is an alphabet
-    startGmae: function() {
+    // proceed to hangman rules if user input is a letter
+    startGame: function() {
         if (this.gameOver === false && this.isAlphabet()) {
             this.checkRules();
         }
@@ -208,7 +207,7 @@ var hangman = {
             } else {
                 html += '<div class="message">You died.</div>';
             }
-            html += '<div class="load">New Word will load in 4 seconds. ';
+            html += '<div class="load">New word will load in 4 seconds. ';
             html += ' <i class="fa fa-spinner fa-spin" aria-hidden="true"></i> </div>';
 
             document.querySelector("#loadingMessage").innerHTML = html;
@@ -233,20 +232,12 @@ var hangman = {
         audio.volume = .5;
     },
 
-    // shows hangman images
-    showHangmanImage: function() {
-        if (this.lives != 10) {
-            document.querySelector("#hangman-img").src = "assets/images/hangman-" + (9 - this.lives) + ".png";
-        } else {
-            document.querySelector("#hangman-img").src = "assets/images/animals.png";
-        }
-    },
-
+    
     // when user clicks letter Buttons 
     letterClick: function(letter) {
         this.userInput = letter.toUpperCase();
         this.disableLetterBtn();
-        this.startGmae();
+        this.startGame();
     },
 
     // disables letters that user has entered
@@ -277,6 +268,6 @@ window.onload = function(event) {
 
         document.onkeyup = function(e) {
             hangman.userInput = String.fromCharCode(e.keyCode).toUpperCase();
-            hangman.startGmae();
+            hangman.startGame();
         }        
     } //End window onload
